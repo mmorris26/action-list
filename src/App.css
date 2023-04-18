@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* margin: 0 auto; */
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  position: sticky;
+  top: 0;
+  background: blue;
+
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navigation-bar h1{
+  display: inline;
+}
+
+main{
+  
+  text-align: center;
+ 
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0; 
+  left: 0;
+  background: blue; 
+  text-align: center;
+  
+  
+}
+.actions-key{
+  display: grid;
+  grid-template-columns: 0.6fr 3fr 0.6fr 0.6fr 0.6fr 0.6fr;
+  grid-template-rows: 50px;
+}
+
+.action-item {
+  display: grid;
+  grid-template-columns: 0.6fr 3fr 0.6fr 0.6fr 0.6fr 0.6fr;
+  grid-template-rows: 100px;
+  padding: 10px;
+}
+
+.select-button {
+  
+  grid-column: 1;
+}
+.action-text{
+  grid-column: 2;
+}
+.action-start-date {
+  
+  background: pink;
+}
+.add-new-item-bar{
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 0.6fr 3fr 0.6fr 0.6fr 0.6fr 0.6fr;;
+  grid-template-rows: 50px;
+  
+}
+.add-action-item-div{
+  grid-column: 1 / 3;
+  margin-top: 13px;
+  
+}
+.add-start-date-div{
+  margin-top: 20px;
+}
+
+.add-end-date-div {
+  margin-top: 20px;
+}
+
+.add-item-button-div{
+  margin-top: 20px;
+
+}
+#add-action-item{
+  height: 30px;
 }
