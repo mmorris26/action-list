@@ -1,11 +1,12 @@
 import { useState } from 'react';
-
+import {Routes, Route} from "react-router-dom";
 
 import './App.css';
 import ActionItemList from './ActionItemList';
 import AddActionItem from './AddActionItem';
 import NavBar from './NavBar';
 import Key from './Key';
+import Weather from './Weather';
 
 function App() {
   
@@ -20,27 +21,36 @@ function addAction (newListItem){
   // console.log(actionList)
 }
 
-// function removeFromList(index){
-//   const smallerArray = actionList.filter(function(item){
-//    return item.index === index
-//   })
-//   setActionList(smallerArray);
-// }
+function removeFromList(index){
+    //console.log(actionList[index]);
+    const smallerArray = actionList.filter(function(item, idx){
+     return idx !== index;
+    })
+    // console.log(smallerArray);
+    setActionList(smallerArray);
+  }
+  
+  // console.log(smallerArray);
+
 
 
   return (
   <div className="App">
       
-    <body>
+   
       
       <header>
         <NavBar />
+        <Routes>
+          {/* <Route path="/" element={<App />} /> */}
+          <Route path="/weather" element={<Weather />} />
+        </Routes>
       </header>
       
       <Key />
      <hr></hr>
       <main>
-      <ActionItemList actionList={actionList} />  
+      <ActionItemList actionList={actionList} removeFromList={removeFromList}/>  
       </main>
       
       <footer>
@@ -48,7 +58,7 @@ function addAction (newListItem){
       </footer>
 
     
-    </body>
+    
   </div>
   );
 }

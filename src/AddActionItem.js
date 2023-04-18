@@ -10,7 +10,7 @@ function handleNewActionItem (e){
         // console.log(newActionItem)
     }
     function handleButtonClick(){
-        console.log(newActionItem)
+        // console.log(newActionItem)
         props.addAction(newActionItem);
         
     }

@@ -1,11 +1,11 @@
 export default function ActionItem (props){
-    
+    // console.log(props)
 function handleCompletedAction(e){
 
+   if(e.target.value === "completed"){
     
-//    if(e.target.value === "completed"){
-        
-//    }
+      props.removeFromList(props.index);  
+   }
 }
     
     return(
