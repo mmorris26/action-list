@@ -10,7 +10,7 @@ export default function NavBar(){
         // </div>
 
         <nav>
-            {/* <Link to="/">Actions</Link> */}
+            
             <Link to="/weather">Weather</Link>
         </nav>
     )

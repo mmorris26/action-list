@@ -14,6 +14,8 @@ const [actionList, setActionList] = useState([
   {title: "Drive to Yorkshire", postcode: "YO1", start:"22/04", end: "22/04", status: "Not Started"},
   {title: "Drive to Sheffield", postcode: "Shef", start:"26/04", end: "29/04", status: "Not Started"}
 ])
+
+const [postcodeState, setPostcodeState] = useState("RG209BE");
   
 function addAction (newListItem){
   const newList = [...actionList, newListItem];
@@ -32,29 +34,36 @@ function removeFromList(index){
   
   // console.log(smallerArray);
 
+function setPostcode(index){
+ setPostcodeState(actionList[index].postcode);
+ console.log(postcodeState);
+}
 
+function deleteAll(index){
+  const deleteAllArray = [...actionList, {title: "", postcode: "", start: "", end: "", status:""} ];
+  setActionList(deleteAllArray)
+}
 
   return (
   <div className="App">
       
-   
-      
       <header>
         <NavBar />
-        <Routes>
-          {/* <Route path="/" element={<App />} /> */}
-          <Route path="/weather" element={<Weather />} />
-        </Routes>
+        
       </header>
       
       <Key />
      <hr></hr>
       <main>
-      <ActionItemList actionList={actionList} removeFromList={removeFromList}/>  
+      <ActionItemList actionList={actionList} removeFromList={removeFromList} setPostcode={setPostcode}/>  
+      <Routes>
+          <Route path="/weather" element={<Weather postcodeState={postcodeState}/>} />
+      </Routes>
+      
       </main>
       
       <footer>
-      <AddActionItem addAction={addAction}/>
+      <AddActionItem addAction={addAction} removeFromList={removeFromList} deleteAll={deleteAll} actionList={actionList}/>
       </footer>
 
     

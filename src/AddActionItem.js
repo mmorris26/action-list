@@ -5,7 +5,7 @@ export default function AddActionItem(props){
 const [newActionItem, setNewActionItem] = useState({title: "", postcode:"", start: "", end: "", status:"Not Started"})
 
     
-function handleNewActionItem (e){
+    function handleNewActionItem (e){
         setNewActionItem({ ...newActionItem, [e.target.name]: e.target.value });
         // console.log(newActionItem)
     }
@@ -14,9 +14,19 @@ function handleNewActionItem (e){
         props.addAction(newActionItem);
         
     }
+    function handleDeleteAll(){
+        
+        props.deleteAll();
+
+    }
+
+
 
     return(
+
         <div className='add-new-item-bar'>
+          <button onClick={handleDeleteAll}className="delete-all-button">Delete All</button>
+          <button className="delete-selected-button">Delete Selected</button>
           <div className='add-action-item-div'>
             <input
                 type="text"
