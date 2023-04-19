@@ -16,7 +16,10 @@ const [actionList, setActionList] = useState([
 ])
 
 const [postcodeState, setPostcodeState] = useState("RG209BE");
+
+const [selectedItemsState, setSelectedItemsState] = useState([]);
   
+
 function addAction (newListItem){
   const newList = [...actionList, newListItem];
   setActionList(newList);
@@ -36,13 +39,43 @@ function removeFromList(index){
 
 function setPostcode(index){
  setPostcodeState(actionList[index].postcode);
- console.log(postcodeState);
+//  console.log(postcodeState);
 }
 
-function deleteAll(index){
-  const deleteAllArray = [...actionList, {title: "", postcode: "", start: "", end: "", status:""} ];
-  setActionList(deleteAllArray)
+function deleteAll(){
+  const smallerArray = [];
+   // console.log(smallerArray);
+   setActionList(smallerArray);
 }
+
+function addIndextoSelectedArray(index){
+  const newSelectedArray = [...selectedItemsState, index];
+  setSelectedItemsState(newSelectedArray);
+  
+  
+}
+
+function deleteSelectedItems(){
+//   let selectedSmallerArray = selectedItemsState.forEach(function(item){
+//     actionList.filter(function(index){
+//       return item !== index;
+    
+//     })
+    
+//   } )
+//  setActionList(selectedSmallerArray);
+  const copyActionList = [...actionList];
+  selectedItemsState.forEach((value) => {
+    copyActionList.splice(value, 1)
+  })
+  setActionList(copyActionList);
+  console.log("copyAcitonList", copyActionList);
+
+  console.log("action List", actionList);
+  console.log("state in App", selectedItemsState);
+  }
+
+
 
   return (
   <div className="App">
@@ -55,7 +88,11 @@ function deleteAll(index){
       <Key />
      <hr></hr>
       <main>
-      <ActionItemList actionList={actionList} removeFromList={removeFromList} setPostcode={setPostcode}/>  
+      <ActionItemList actionList={actionList} 
+      removeFromList={removeFromList} 
+      setPostcode={setPostcode} 
+      addIndextoSelectedArray={addIndextoSelectedArray}
+      />  
       <Routes>
           <Route path="/weather" element={<Weather postcodeState={postcodeState}/>} />
       </Routes>
@@ -63,7 +100,14 @@ function deleteAll(index){
       </main>
       
       <footer>
-      <AddActionItem addAction={addAction} removeFromList={removeFromList} deleteAll={deleteAll} actionList={actionList}/>
+      <AddActionItem addAction={addAction} 
+      removeFromList={removeFromList} 
+      deleteAll={deleteAll} 
+      actionList={actionList}
+      selectedItemsState={selectedItemsState}
+      deleteSelectedItems={deleteSelectedItems}
+      
+      />
       </footer>
 
     

@@ -15,18 +15,20 @@ const [newActionItem, setNewActionItem] = useState({title: "", postcode:"", star
         
     }
     function handleDeleteAll(){
-        
         props.deleteAll();
-
+    }
+    function handleDeleteSelected(){
+        props.deleteSelectedItems();
+        
     }
 
 
-
+   
     return(
 
         <div className='add-new-item-bar'>
           <button onClick={handleDeleteAll}className="delete-all-button">Delete All</button>
-          <button className="delete-selected-button">Delete Selected</button>
+          <button onClick={handleDeleteSelected}className="delete-selected-button">Delete Selected</button>
           <div className='add-action-item-div'>
             <input
                 type="text"

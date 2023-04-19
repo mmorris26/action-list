@@ -9,26 +9,30 @@ function handleCompletedAction(e){
    }
 }
 
-// function handleDeleteSelected(e){
-
-//     let selectedButtonArray = [];
-
-//     props.removeFromList(props.index)
-    
-// }
+function addToSelectedArray(e){
+    if(e.target.value === "select"){
+        console.log("props.index", props.index)
+        props.addIndextoSelectedArray(props.index);
+    }
+}
 
 function handlePostcodeClick(e){
     // console.log(props.index)
     props.setPostcode(props.index);
+
+
+
 }
+
+
 
     
     return(
      <div className='action-item'>
-        <select className='select-dropdown'>
+        <select onChange={addToSelectedArray} className='select-dropdown'>
             <option>Select an Option</option>
             <option value="edit">Edit</option>
-            <option value="select">Select</option>
+            <option  value="select">Select</option>
         </select>
         <p className='action-text'>{props.item.title}</p>
         <p onClick={handlePostcodeClick} className="postcode">{props.item.postcode}</p>
