@@ -19,16 +19,26 @@ const [newActionItem, setNewActionItem] = useState({title: "", postcode:"", star
     }
     function handleDeleteSelected(){
         props.deleteSelectedItems();
-        
     }
 
+    // function editActionItem(){
+    //    console.log("edid item", props.editItem)
+    //    let editItemItem = props.editItem;
+       
+    //     const itemToEdit =({...newActionItem, editItemItem})
+        
+    //     setNewActionItem(itemToEdit);
+        
+    // }
 
+   
    
     return(
 
         <div className='add-new-item-bar'>
           <button onClick={handleDeleteAll}className="delete-all-button">Delete All</button>
           <button onClick={handleDeleteSelected}className="delete-selected-button">Delete Selected</button>
+          {/* <button onClick={editActionItem} className="edit-item-button">Edit Item</button> */}
           <div className='add-action-item-div'>
             <input
                 type="text"

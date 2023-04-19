@@ -9,6 +9,7 @@ const newActionList = props.actionList.map(function(item, index){
     setPostcode={props.setPostcode}
     getCurrentWeather={props.getCurrentWeather}
     addIndextoSelectedArray={props.addIndextoSelectedArray}
+    getItemToEdit={props.getItemToEdit}
     
     />
 })

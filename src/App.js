@@ -18,6 +18,10 @@ const [actionList, setActionList] = useState([
 const [postcodeState, setPostcodeState] = useState("RG209BE");
 
 const [selectedItemsState, setSelectedItemsState] = useState([]);
+
+const [editItem, setEditItem] = useState({});
+
+const [btnState, setBtnState] = useState(false);
   
 
 function addAction (newListItem){
@@ -56,25 +60,22 @@ function addIndextoSelectedArray(index){
 }
 
 function deleteSelectedItems(){
-//   let selectedSmallerArray = selectedItemsState.forEach(function(item){
-//     actionList.filter(function(index){
-//       return item !== index;
-    
-//     })
-    
-//   } )
-//  setActionList(selectedSmallerArray);
   const copyActionList = [...actionList];
   selectedItemsState.forEach((value) => {
     copyActionList.splice(value, 1)
   })
   setActionList(copyActionList);
-  console.log("copyAcitonList", copyActionList);
-
-  console.log("action List", actionList);
-  console.log("state in App", selectedItemsState);
   }
 
+function getItemToEdit(index){
+  console.log("action list index", actionList[index])
+  }
+
+  function handleEditButtonClick(){
+    setBtnState(btnState => !btnState);
+  }
+
+  let toggleClassCheck = btnState ? '-active': '-hidden';
 
 
   return (
@@ -88,10 +89,16 @@ function deleteSelectedItems(){
       <Key />
      <hr></hr>
       <main>
+        <div className={`edit-button-screen${toggleClassCheck}`}>
+          <h1>Please Edit your Action Item</h1>
+        </div>
+        <button onClick={handleEditButtonClick}>Edit Item</button>
       <ActionItemList actionList={actionList} 
       removeFromList={removeFromList} 
       setPostcode={setPostcode} 
       addIndextoSelectedArray={addIndextoSelectedArray}
+      // editItem={editItem}
+      getItemToEdit={getItemToEdit}
       />  
       <Routes>
           <Route path="/weather" element={<Weather postcodeState={postcodeState}/>} />
@@ -106,7 +113,8 @@ function deleteSelectedItems(){
       actionList={actionList}
       selectedItemsState={selectedItemsState}
       deleteSelectedItems={deleteSelectedItems}
-      
+      // getItemToEdit={getItemToEdit}
+      // editItem={editItem}
       />
       </footer>
 

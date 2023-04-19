@@ -1,35 +1,34 @@
 export default function ActionItem (props){
    
-    // console.log(props)
+   
 function handleCompletedAction(e){
-
    if(e.target.value === "completed"){
-    
       props.removeFromList(props.index);  
    }
 }
 
-function addToSelectedArray(e){
+function handleSelect(e){
     if(e.target.value === "select"){
         console.log("props.index", props.index)
         props.addIndextoSelectedArray(props.index);
+    }
+    if(e.target.value === "edit"){
+        props.getItemToEdit(props.index);
     }
 }
 
 function handlePostcodeClick(e){
     // console.log(props.index)
     props.setPostcode(props.index);
-
-
-
 }
+
 
 
 
     
     return(
      <div className='action-item'>
-        <select onChange={addToSelectedArray} className='select-dropdown'>
+        <select onChange={handleSelect} className='select-dropdown'>
             <option>Select an Option</option>
             <option value="edit">Edit</option>
             <option  value="select">Select</option>

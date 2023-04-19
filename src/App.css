@@ -85,8 +85,17 @@ footer {
 #add-action-item{
   height: 30px;
 }
-.delete-all-button, .delete-selected-button{
+.delete-all-button, .delete-selected-button, .edit-item-button{
   grid-column: 1;
   height: 30px;
   align-content: center;
+}
+.edit-button-screen-active{
+  height: 150px;
+  width: 150px;
+  background: yellow;
+}
+
+.edit-button-screen-hidden{
+  display: none;
 }
