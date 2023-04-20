@@ -23,7 +23,18 @@ Below are the user stories for this project;
 
 Below shows my initial design for the Actions section of my web app.
 
-image.png
+IMG_4213.png
+
+From this design I then thought about how I would lay this out with CSS and produced the following design.
+
+IMG_4214.png
+
+Here it can be see that I am planning to use a CSS grid layout with 4 columns. My individual actions will have 4 fields each, 3 of these will be <p> and one <select>.
+
+Finally for the tab that displays the weather to the user this is my original design.
+
+IMG_4215.png
+
 
 
 
