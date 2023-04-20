@@ -31,7 +31,7 @@ From this design I then thought about how I would lay this out with CSS and prod
 ![IMG_4214](https://user-images.githubusercontent.com/126505751/233420194-9ea20046-287f-4c44-82a1-f7179f7a0404.png)
 
 
-Here it can be see that I am planning to use a CSS grid layout with 4 columns. My individual actions will have 4 fields each, 3 of these will be <p> and one <select>.
+Here it can be see that I am planning to use a CSS grid layout with 4 columns. My individual actions will have 4 fields each, 3 of these will be paragraph elements and one select element.
 
 Finally for the tab that displays the weather to the user this is my original design.
 
