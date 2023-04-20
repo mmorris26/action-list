@@ -67,5 +67,11 @@ Due to this project taking longer than expected there are a number of features I
 
 * **Weather Forecast** - Originally I wanted to include two views of the weather, one based on the current weather and one based on the weather of the end date of the action. This is a feature I will add in the future.
 * **Calendar** - When I have the relevant skills I want to be able to post my action items to Google Calendar and have them display the items as calendar events. I would create another route in my app to host the users calendar.
-* **Input Validation** - Currently when a user creates a new action there is no validation on any of the onput fields. A refinement I would like to make is to 
+* **Input Validation** - Currently when a user creates a new action there is no validation on any of the onput fields. A refinement I would like to make is to ensure the user only enters valid dates (correct format and not in the past) and valid postcodes (this would be a regex expression).
+* **Styling** - The application has very basic styling as that was not the point of this exercise. However I would like to style it so that it looks sleek and minimal. The Footer needs a lot of work.
+* **Remove Unnecessary Code** - I think there is a fair amount of code that can be made more efficient. One quick fix would be to use destructuring of props more. 
+* **Splitting the Code out into More Components** - My Home component has a lot of functionality that could be split out into multiple components. For example the edit screen that occurs when a users clicks the edit button is all housed within the Home component when it should really be in it's own component. I would like to make this more component based.
+* **Fixing Bugs** - There are a few bugs that make the user experience worse than it could be. For example, when you add a new item to the list and then go to the weather tab and back to the home page tab the item just created will be gone. In order to fix this I need to move my main state into the App component but I spent about 45 mins trying to fix issues after doing this and so decided to spend my time working on other areas of the app before submission.
+
+
 
