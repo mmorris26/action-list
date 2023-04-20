@@ -12,6 +12,8 @@ export default function Weather (props){
     
     
     const [weather, setWeather] = useState({img: "", summary: "", rain: null, temperature: null});
+
+    //const [futureWeather, setFutureWeather] = useState({img: "", summary: "", rain: null, temperature: null});
     
     function getCurrentWeather(){
     
@@ -25,13 +27,17 @@ export default function Weather (props){
           setWeather ({...weather, 'img': current.condition.icon, 'summary': current.condition.text, 'rain': current.precip_in, 'temperature': current.temp_c})
       })
     };
+
+    // function getFutureWeather(){
+
+    // }
  
    
     return(
         <>
         <h2>Weather</h2>
 
-        <button className="weather-button" onClick={getCurrentWeather}>Get Current Weather</button>
+        <button className="weather-button" onClick={getCurrentWeather}>Get Weather</button>
         <div className="weather-icon-div">
         <img src={weather.img} className="weather-image"></img>
         </div>

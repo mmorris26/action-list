@@ -43,6 +43,7 @@ footer {
   border-radius: 10px;
   
   
+  
 }
 .actions-key{
   display: grid;
@@ -59,6 +60,7 @@ footer {
   border-style: solid;
   border-color: lightslategray;
   border-radius: 5px;
+  
 }
 
 .select-button {
@@ -69,41 +71,43 @@ footer {
   grid-column: 2;
   
 }
-.action-start-date {
-  
-  
-}
+
 .add-new-item-bar{
   margin-bottom: 10px;
   display: grid;
   grid-template-columns: 0.6fr 3fr 0.6fr 0.6fr 0.6fr 0.6fr;
+  
+
 
   
 }
 .add-action-item-div{
   grid-column: 2 / 3;
-  margin-top: 20px;
-  grid-row: 1 / 2;
+  margin-top: 30px;
+  grid-row: 1 / 3;
   
 }
 .add-start-date-div, .add-end-date-div, .add-postcode-div{
-  margin-top: 15px;
+  margin-top: 30px;
   margin-right: 5px;
+  grid-row: 1/ 3 ;
+  
 }
 
 .add-start-date-div{
   grid-column: 4;
-  grid-rows: 1 /2;
+  
 }
 
 .add-end-date-div{
   grid-column: 5;
-  grid-rows: 1 /2;
+  
 }
 
 .add-item-button-div{
-  margin-top: 10px;
-
+  margin-top: 30px;
+  grid-column: 6;
+  grid-row: 1/ 3 ;
 }
 #add-action-item{
   height: 16px;
@@ -169,5 +173,5 @@ a{
 }
 .add-postcode-div{
   grid-column: 3;
-  grid-row: 1 / 2;
+  grid-row: 1 / 3;
 }

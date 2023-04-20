@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import {Routes, Route} from "react-router-dom";
+
 
 import './App.css';
 import ActionItemList from './ActionItemList';
 import AddActionItem from './AddActionItem';
-import NavBar from './NavBar';
+
 import Key from './Key';
-import Weather from './Weather';
+
 
 function Home(props) {
   
