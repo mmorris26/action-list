@@ -109,8 +109,8 @@ function getItemToEdit(index){
   <div className="App">
       
       <header>
+        {/* <h1>Plan your Actions According to the Weather!</h1> */}
         <NavBar />
-        
       </header>
       
       <Key />
@@ -163,8 +163,7 @@ function getItemToEdit(index){
       actionList={actionList}
       selectedItemsState={selectedItemsState}
       deleteSelectedItems={deleteSelectedItems}
-      // getItemToEdit={getItemToEdit}
-      // editItem={editItem}
+      
       />
       </footer>
 

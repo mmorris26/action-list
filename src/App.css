@@ -1,21 +1,28 @@
 body{
   min-height: 100vh;
   /* margin: 0 auto; */
+  color: rgb(208, 135, 0);
 }
 
 header {
   position: sticky;
   top: 0;
-  background: blue;
+  background: lightgray;
   font: bold;
   color: black;
-  
+  height: 40px;
+  text-align: center;
 
   
 }
 
 .navigation-bar h1{
   display: inline;
+  
+}
+.actions-key{
+  margin: 5px;
+  text-align: center;
 }
 
 main{
@@ -29,7 +36,7 @@ footer {
   bottom: 0;
   right: 0; 
   left: 0;
-  background: blue; 
+  background: lightgray; 
   text-align: center;
   
   
@@ -45,6 +52,10 @@ footer {
   grid-template-columns: 0.6fr 3fr 0.6fr 0.6fr 0.6fr 0.6fr;
   grid-template-rows: 50px;
   padding: 10px;
+  margin: 10px;
+  border-style: solid;
+  border-color: lightslategray;
+  border-radius: 5px;
 }
 
 .select-button {
@@ -56,34 +67,35 @@ footer {
 }
 .action-start-date {
   
-  background: pink;
+  
 }
 .add-new-item-bar{
   margin-bottom: 10px;
   display: grid;
   grid-template-columns: 0.6fr 3fr 0.6fr 0.6fr 0.6fr 0.6fr;;
-  grid-template-rows: 50px;
+  /* grid-template-rows: 1 */
   
 }
 .add-action-item-div{
   grid-column: 2 / 3;
-  margin-top: 13px;
+  margin-top: 14px;
   
 }
-.add-start-date-div{
-  margin-top: 20px;
+.add-start-date-div, .add-end-date-div, .add-postcode-div{
+  margin-top: 15px;
+  margin-right: 5px;
 }
 
-.add-end-date-div {
-  margin-top: 20px;
-}
+
 
 .add-item-button-div{
-  margin-top: 20px;
+  margin-top: 10px;
 
 }
 #add-action-item{
-  height: 30px;
+  height: 16px;
+  width:600px;
+  
 }
 .delete-all-button, .delete-selected-button, .edit-item-button{
   grid-column: 1;
@@ -94,8 +106,9 @@ footer {
   
   height: 150px;
   width: 1000px;
-  background: yellow;
+  background: lightgray;
   margin-left: 220px;
+  border-radius: 10px;
   
 
 }
@@ -106,3 +119,7 @@ footer {
 .edit-button-screen-hidden{
   display: none;
 }
+.delete-all-button{
+  grid-template-rows: 2;
+}
+

@@ -9,8 +9,7 @@ export default function NavBar(){
         //   <h1 id="weather-tab">Weather</h1>
         // </div>
 
-        <nav>
-            
+        <nav> 
             <Link to="/weather">Weather</Link>
         </nav>
     )

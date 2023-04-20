@@ -50,6 +50,7 @@ const [newActionItem, setNewActionItem] = useState({title: "", postcode:"", star
                 size="40">
             </input>
           </div>
+          <div className="add-postcode-div">
           <input
             type="text"
             name="postcode"
@@ -57,6 +58,7 @@ const [newActionItem, setNewActionItem] = useState({title: "", postcode:"", star
             onChange={handleNewActionItem}
             placeholder='Postcode'>
           </input>
+          </div>
           <div className='add-start-date-div'>
             <input
                 type="text"
