@@ -30,6 +30,21 @@ From this design I then thought about how I would lay this out with CSS and prod
 
 ![IMG_4214](https://user-images.githubusercontent.com/126505751/233420194-9ea20046-287f-4c44-82a1-f7179f7a0404.png)
 
+## Current State
+
+Having gone through the building process below shows the current state of the homepage of my app.
+
+![image](https://user-images.githubusercontent.com/126505751/233421319-723b7858-f5ae-4962-9360-122fd879ea6a.png)
+
+and the weather page 
+
+![image](https://user-images.githubusercontent.com/126505751/233421523-ad06f5cc-59cf-47db-aa00-66643e3cfccc.png)
+
+
+
+
+
+
 
 Here it can be see that I am planning to use a CSS grid layout with 4 columns. My individual actions will have 4 fields each, 3 of these will be paragraph elements and one select element.
 
