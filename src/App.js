@@ -19,10 +19,12 @@ const [postcodeState, setPostcodeState] = useState("RG209BE");
 
 const [selectedItemsState, setSelectedItemsState] = useState([]);
 
-const [editItem, setEditItem] = useState({});
+const [editItem, setEditItem] = useState(1);
 
 const [btnState, setBtnState] = useState(false);
-  
+
+const [newEditedItem, setNewEditedItem] = useState({title: "", postcode:"", start: "", end: "", status:"Not Started"});
+
 
 function addAction (newListItem){
   const newList = [...actionList, newListItem];
@@ -68,14 +70,35 @@ function deleteSelectedItems(){
   }
 
 function getItemToEdit(index){
-  console.log("action list index", actionList[index])
+    // const newEditItemArray = [...editItem, index];
+    // setEditItem(newEditItemArray);
+    setEditItem(index);
+  
+    
   }
 
   function handleEditButtonClick(){
     setBtnState(btnState => !btnState);
+    removeFromList(editItem);
   }
 
   let toggleClassCheck = btnState ? '-active': '-hidden';
+
+  function handleEditSubmitButton(){
+    console.log("this is working")
+    console.log("newEditedItem", newEditedItem)
+    const finalEditedItem = [...actionList, newEditedItem]
+    setActionList(finalEditedItem);
+    console.log("action list", actionList)
+    
+    
+
+  }
+
+  function handleNewEditedActionItem (e){
+    setNewEditedItem({ ...newEditedItem, [e.target.name]: e.target.value });
+    
+  }
 
 
   return (
@@ -91,8 +114,31 @@ function getItemToEdit(index){
       <main>
         <div className={`edit-button-screen${toggleClassCheck}`}>
           <h1>Please Edit your Action Item</h1>
+          <input name="title" 
+          onChange={handleNewEditedActionItem}
+          placeholder={actionList[editItem].title}
+          value={newEditedItem.title}
+          ></input>
+          <input name="postcode" 
+          onChange={handleNewEditedActionItem}
+          placeholder={actionList[editItem].postcode}
+          value={newEditedItem.postcode}
+          ></input>
+          <input name="start" 
+          onChange={handleNewEditedActionItem}
+          // placeholder={actionList[editItem].start}
+          value={newEditedItem.start}
+          ></input>
+          <input name="end" 
+          onChange={handleNewEditedActionItem}
+          // placeholder={actionList[editItem].end}
+          value={newEditedItem.end}
+          ></input>
+          <button onClick={handleEditSubmitButton}>Submit</button>
+
+
         </div>
-        <button onClick={handleEditButtonClick}>Edit Item</button>
+        <button onClick={handleEditButtonClick} >Edit Item</button>
       <ActionItemList actionList={actionList} 
       removeFromList={removeFromList} 
       setPostcode={setPostcode} 

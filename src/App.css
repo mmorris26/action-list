@@ -91,11 +91,18 @@ footer {
   align-content: center;
 }
 .edit-button-screen-active{
+  
   height: 150px;
-  width: 150px;
+  width: 1000px;
   background: yellow;
+  margin-left: 220px;
+  
+
 }
 
+.edit-button-screen-active input{
+ margin-right: 30px;
+}
 .edit-button-screen-hidden{
   display: none;
 }
