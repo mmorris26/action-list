@@ -25,6 +25,7 @@ const [btnState, setBtnState] = useState(false);
 
 const [newEditedItem, setNewEditedItem] = useState({title: "", postcode:"", start: "", end: "", status:"Not Started"});
 
+const [placeholderState, setNewPlaceholderState] = useState({title: "", postcode:"", start: "", end: ""})
 
 function addAction (newListItem){
   const newList = [...actionList, newListItem];
@@ -73,12 +74,14 @@ function getItemToEdit(index){
     // const newEditItemArray = [...editItem, index];
     // setEditItem(newEditItemArray);
     setEditItem(index);
+    setNewPlaceholderState(actionList[index]);
   
     
   }
 
   function handleEditButtonClick(){
     setBtnState(btnState => !btnState);
+    
     removeFromList(editItem);
   }
 
@@ -90,13 +93,14 @@ function getItemToEdit(index){
     const finalEditedItem = [...actionList, newEditedItem]
     setActionList(finalEditedItem);
     console.log("action list", actionList)
-    
+    setBtnState(btnState => !btnState)
     
 
   }
 
   function handleNewEditedActionItem (e){
     setNewEditedItem({ ...newEditedItem, [e.target.name]: e.target.value });
+    
     
   }
 
@@ -116,22 +120,22 @@ function getItemToEdit(index){
           <h1>Please Edit your Action Item</h1>
           <input name="title" 
           onChange={handleNewEditedActionItem}
-          placeholder={actionList[editItem].title}
+          placeholder={placeholderState.title}
           value={newEditedItem.title}
           ></input>
           <input name="postcode" 
           onChange={handleNewEditedActionItem}
-          placeholder={actionList[editItem].postcode}
+          placeholder={placeholderState.postcode}
           value={newEditedItem.postcode}
           ></input>
           <input name="start" 
           onChange={handleNewEditedActionItem}
-          // placeholder={actionList[editItem].start}
+          placeholder={placeholderState.start}
           value={newEditedItem.start}
           ></input>
           <input name="end" 
           onChange={handleNewEditedActionItem}
-          // placeholder={actionList[editItem].end}
+          placeholder={placeholderState.end}
           value={newEditedItem.end}
           ></input>
           <button onClick={handleEditSubmitButton}>Submit</button>
