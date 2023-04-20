@@ -41,7 +41,7 @@ function handlePostcodeClick(e){
         <p onClick={handlePostcodeClick} className="postcode"><Link to="/weather">{props.item.postcode}</Link></p>
         <p className='action-start-date'>{props.item.start}</p>
         <p className='action-end-date'>{props.item.end}</p>
-        <select onChange={handleCompletedAction} name='status' id="status">
+        <select onChange={handleCompletedAction} name='status' id="status" className="select-status">
             <option value="backlog">Not Started</option>
             <option value="doing">In Progress</option>
             <option value="completed">Completed</option>
