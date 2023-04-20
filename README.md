@@ -22,18 +22,21 @@ Below are the user stories for this project;
 ## Wireframes
 
 Below shows my initial design for the Actions section of my web app.
+![IMG_4213](https://user-images.githubusercontent.com/126505751/233420163-f174b7d8-1c1e-4a61-a5c4-8c81baeb77f5.jpg)
 
-IMG_4213.png
+
 
 From this design I then thought about how I would lay this out with CSS and produced the following design.
 
-IMG_4214.png
+![IMG_4214](https://user-images.githubusercontent.com/126505751/233420194-9ea20046-287f-4c44-82a1-f7179f7a0404.png)
+
 
 Here it can be see that I am planning to use a CSS grid layout with 4 columns. My individual actions will have 4 fields each, 3 of these will be <p> and one <select>.
 
 Finally for the tab that displays the weather to the user this is my original design.
 
-IMG_4215.png
+![IMG_4215](https://user-images.githubusercontent.com/126505751/233420235-dafc39b0-d3b6-4175-82e3-c0c8d8c779ee.jpg)
+
 
 
 
