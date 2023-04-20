@@ -123,3 +123,25 @@ footer {
   grid-template-rows: 2;
 }
 
+.weather-image{
+  height: 200px;
+}
+.weather-button{
+  background: lightgray;
+  border-style: solid;
+  border-color: lightgrey;
+  color:rgb(208, 135, 0) ;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.postcode{
+  color:rgb(208, 135, 0) ;
+}
+a{
+  color:rgb(208, 135, 0) ;
+  text-decoration: none;
+}

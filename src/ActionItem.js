@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 export default function ActionItem (props){
    
    
@@ -34,7 +37,8 @@ function handlePostcodeClick(e){
             <option  value="select">Select</option>
         </select>
         <p className='action-text'>{props.item.title}</p>
-        <p onClick={handlePostcodeClick} className="postcode">{props.item.postcode}</p>
+        
+        <p onClick={handlePostcodeClick} className="postcode"><Link to="/weather">{props.item.postcode}</Link></p>
         <p className='action-start-date'>{props.item.start}</p>
         <p className='action-end-date'>{props.item.end}</p>
         <select onChange={handleCompletedAction} name='status' id="status">

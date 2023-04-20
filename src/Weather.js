@@ -30,11 +30,14 @@ export default function Weather (props){
     return(
         <>
         <h2>Weather</h2>
-        <button onClick={getCurrentWeather}>Get Current Weather</button>
+
+        <button className="weather-button" onClick={getCurrentWeather}>Get Current Weather</button>
+        <div className="weather-icon-div">
         <img src={weather.img} className="weather-image"></img>
-        <p className="weather-summary">{weather.summary}</p>
-        <p className="weather-rain">Rain: {weather.rain}</p>
-        <p className="temperature">Temperature: {weather.temperature}</p>
+        </div>
+        <h3 className="weather-summary">{weather.summary}</h3>
+        <h3 className="weather-rain">Rain: {weather.rain}</h3>
+        <h3 className="temperature">Temperature: {weather.temperature}</h3>
         </>
         
     )

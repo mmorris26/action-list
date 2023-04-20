@@ -10,6 +10,8 @@ export default function NavBar(){
         // </div>
 
         <nav> 
+            <Link to="/home">Home</Link>
+            &nbsp; | &nbsp;
             <Link to="/weather">Weather</Link>
         </nav>
     )
