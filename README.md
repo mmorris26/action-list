@@ -23,5 +23,7 @@ Below are the user stories for this project;
 
 Below shows my initial design for the Actions section of my web app.
 
+image.png
+
 
 
